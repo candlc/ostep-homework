@@ -339,7 +339,10 @@ class Disk:
                 tmpList.append(int(random.random() * maxRequest) + minRequest)
             return tmpList
         else:
-            return addr.split(',')
+            tmpList = []
+            for x in addr.split(','):
+                tmpList.append(int(x))
+            return tmpList
 
     #
     # BUTTONS
